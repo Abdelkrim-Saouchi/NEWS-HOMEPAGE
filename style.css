@@ -24,7 +24,6 @@
 body {
     font-family: Inter-font;
     font-size: 15px;
-    max-height: 100vh;
     background-color: var(--off-white);
 }
 
@@ -164,6 +163,28 @@ button:hover, button:focus {
 .subject h4:hover, .subject h4:focus {
     color: var(--soft-orange);
     cursor: pointer;
+}
+
+.articles {
+    display: flex;
+    gap: 1rem;
+    margin-top: 48px;
+    /* margin-bottom: 48px; */
+}
+
+.card {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: calc(calc(100% - 120px) / 3);
+}
+
+.card img {
+    flex: 1;
+    max-width: 33%;
+}
+
+.card .info {
+    flex: 2;
 }
 
 
