@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap'); */
+
 @font-face {
     font-family: Inter-font;
     src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
@@ -13,6 +13,7 @@
     --grayish-blue: hsl(233, 8%, 79%);
     --dark-grayish-blue: hsl(236, 13%, 42%);
     --very-dark-blue: hsl(240, 100%, 5%);
+    --line-height: 1.6;
 }
 
 * {
@@ -89,6 +90,7 @@ section {
 }
 
 h1 {
+    color: var(--very-dark-blue);
     font-size: 56px;
     font-weight: 800;
     line-height: 1;
@@ -103,14 +105,12 @@ h1 {
 
 .desc p {
     color: var(--dark-grayish-blue);
-    line-height: 1.6;
-    /* margin-bottom: 24px; */
+    line-height: var(--line-height);
 }
 
 button {
     background-color: var(--soft-red);
     color: var(--off-white);
-    /* font-size: large; */
     letter-spacing: 3px;
     font-weight: 700;
     text-align: center;
@@ -147,7 +147,7 @@ button:hover, button:focus {
 .new-section p {
     margin-top: 16px;
     color: var(--dark-grayish-blue);
-    line-height: 1.6;
+    line-height: var(--line-height);
 }
 
 .one::after, .two::after{
@@ -167,24 +167,56 @@ button:hover, button:focus {
 
 .articles {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
+    justify-content: space-between;
     margin-top: 48px;
-    /* margin-bottom: 48px; */
+    max-width: 100%;
 }
 
 .card {
     display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
     flex-grow: 1;
-    flex-basis: calc(calc(100% - 120px) / 3);
+    flex-basis: 33.33%;
+    
 }
 
 .card img {
     flex: 1;
-    max-width: 33%;
+    max-width: 28%;
+    
 }
 
 .card .info {
     flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info h3 {
+    color: var(--grayish-blue);
+    font-size: 28px;
+}
+
+.info h4 {
+    color: var(--very-dark-blue);
+    font-weight: 800;
+}
+
+.info p {
+    color: var(--dark-grayish-blue);
+    line-height: var(--line-height);
+}
+
+.info h4:hover, .info h4:focus {
+    color: var(--soft-red);
+    cursor: pointer;
+}
+
+.card:nth-child(2), .card:last-child {
+    margin-left: 82px;
 }
 
 
