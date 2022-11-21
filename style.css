@@ -219,4 +219,46 @@ button:hover, button:focus {
     margin-left: 82px;
 }
 
+.hidden {
+    display: none;
+}
+
+@media (max-width: 375px) {
+    .container {
+        margin: 24px 12px;
+    }
+    .logo {
+        max-width: 55px;
+    }
+    nav {
+        display: none;
+    }
+    .hidden {
+        display: block;
+    }
+    section {
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .visible {
+        display: none;
+    }
+    .text-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    h1 {
+        font-size: 46px;
+    }
+    .desc {
+        gap: 2rem;
+    }
+    .articles {
+        flex-direction: column;
+    }
+    .card:nth-child(2), .card:last-child {
+        margin-left: 0;
+    }
+}
+
 
